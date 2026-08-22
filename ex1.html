@@ -1,0 +1,50 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
+    <form name="cadastro" method="post" action="php/cadastro.php">
+    </form>
+	<title>ex1</title>
+    </head>
+<main class="grid">
+	<script type="text/javascript">
+	function horario(){
+		hoje = new Date();
+
+		hora = hoje.getHours();
+		if (hora < 10)
+			hora = "0" + hora;
+
+		minutos = hoje.getMinutes();
+		if (minutos < 10)
+			minutos = "0" + minutos;
+
+		segundos = hoje.getSeconds();
+		if (segundos < 10)
+			segundos = "0" + segundos;
+
+		document.form1.horaatual.value = hora+":"+minutos+":"+segundos;
+
+	}
+window.setInterval("horario()", 1000);
+</script>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+    <main class="grid">
+		<!-- primeira sessão -->
+		<section class="grid-item"> <!-- section - usado para fazer uma sessão expecífica para cada parte em que for demarcada com a grid -->
+			<form name="cadastro" method="post" action="php/cadastro.php">
+				<label>Nome:</label> <input type="text" name="nome" class="input1">
+				<p></p>
+				<label>Endereço:</label> <input type="text" name="ender" class="input1">
+				<p></p>
+				<label>Telefone:</label> <input type="text" name="telef" class="input1">
+				<p></p>
+				<label>Cidade:</label> <input type="text" name="cidad" class="input1">
+				<p></p>
+				<input type="submit" value="ENVIAR">
+				<input type="reset" value="APAGAR">
+            </form>
+            
+        </section>
+    </main>
+</main>
+</html>

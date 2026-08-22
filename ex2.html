@@ -1,0 +1,83 @@
+<!DOCTYPE html>  <!-- iniciação do html -->
+<html>
+<head>
+	<meta charset="utf-8"> <!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
+	<link rel="shortcut icon" href="img/icone.ico"> <!-- codigo para colocar icone no site -->	
+	<link rel="stylesheet" type="text/css" href="CSS/estilos9.css"> <!-- diretório para o css -->
+	<title>Calculadora Complexa</title> <!-- título do site -->
+</head>
+<script type="text/javascript">
+	function horario(){
+		hoje = new Date();
+
+		hora = hoje.getHours();
+		if (hora < 10)
+			hora = "0" + hora;
+
+		minutos = hoje.getMinutes();
+		if (minutos < 10)
+			minutos = "0" + minutos;
+
+		segundos = hoje.getSeconds();
+		if (segundos < 10)
+			segundos = "0" + segundos;
+
+		document.form1.horaatual.value = hora+":"+minutos+":"+segundos;
+
+	}
+window.setInterval("horario()", 1000);
+</script>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<body class="container"> <!-- class - usado para criar uma classe em que será, possivelmente modificado -->
+	<header> <!-- ESTE É O CABEÇALHO DO SITE -->
+		<div class="logo">
+			<center><img src="IMG/logotipo.png" alt="logotipo" height="150px"></center>
+		<center><h1>Calculadora com PHP</h1></center> <!-- center - usado para centralizar algo -->
+			<center><img src="IMG/logotipo.png" alt="logotipo" height="150px"></center>
+		</div>
+		<nav id="menu">
+		<script type="text/javascript">
+			$("ul").hide(); //hide - esconder
+			$("ul").show("slow");
+
+			$("a").click(function(){
+			$("ul").show("slow");	
+			});
+		</script>
+	</header>
+	<main class="grid">
+		<!-- primeira sessão -->
+		<section class="grid-item"> <!-- section - usado para fazer uma sessão expecífica para cada parte em que for demarcada com a grid -->
+			<form action="" method="post" >
+      Primeiro Numero: <input name="num1" type="text"><br>
+      Segundo numero: <input name="num2" type="text"><br>
+      <input type="submit" name="operacao" value="+">     
+      <input type="submit" name="operacao" value="-">     
+      <input type="submit" name="operacao" value="*">     
+      <input type="submit" name="operacao" value="/">     
+   </form> 
+<?php
+
+   $a = $_POST['num1'];
+   $b = $_POST['num2'];
+   $op= $_POST['operacao'];
+
+   if( !empty($op) ) {
+      if($op == '+')
+         $c = $a + $b;
+      else if($op == '-')
+         $c = $a - $b;
+      else if($op == '*')
+         $c = $a*$b;
+      else
+         $c = $a/$b;
+
+      echo "O resultado da opera&ccedil;&atilde;o &eacute;: $c";
+   }
+
+?>    
+		</section>
+		
+	</main>
+	<footer class="rodape"> <!-- CONTÉM INFORMAÇÕES SOBRE O AUTOR DA SEÇÃO DE DADOS, DIREITOS AUTORAIS OU LINKS PARA DOCUMENTOS RELACIONADOS -->
+		<form name="form1">

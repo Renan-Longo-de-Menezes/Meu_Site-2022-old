@@ -1,0 +1,38 @@
+h1{
+    background-color: #00004d;
+    color: #ddd;
+    font-size: 42px;
+    padding: 48px 32px;
+    letter-spacing: 1px;
+    text-shadow: 10px 2px 10px #48d1cc;
+    border-radius: 10px;
+}
+
+.container{
+    background: linear-gradient(to bottom, #ffffff 0%, #48d1cc 100%);
+    margin: 32px 64px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container img{
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 22px; 
+}
+
+.grid-item{
+    background-color: #ffffff;
+    color: #000000;
+    padding: 32px;
+    border-radius: 10px;
+}
+
+a{
+    color: #48d1cc;
+}
