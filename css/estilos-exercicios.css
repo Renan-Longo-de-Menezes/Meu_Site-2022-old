@@ -1,0 +1,383 @@
+/* ===== RESET ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0fafa 0%, #48d1cc 100%);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.ex-header {
+    background-color: #00004d;
+    padding: 32px 24px;
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 77, 0.3);
+}
+
+.ex-header h1 {
+    color: #ddd;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 10px rgba(72, 209, 204, 0.6);
+    margin-bottom: 6px;
+}
+
+.ex-header p {
+    color: #48d1cc;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ===== RELÓGIO ===== */
+.clock-bar {
+    background-color: rgba(0, 0, 77, 0.9);
+    color: #48d1cc;
+    text-align: center;
+    padding: 8px;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 2px;
+}
+
+/* ===== MAIN ===== */
+.ex-main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 16px;
+}
+
+.ex-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 520px;
+}
+
+.ex-card h2 {
+    color: #00004d;
+    font-size: 22px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.ex-card .subtitle {
+    color: #666;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+/* ===== FORMULÁRIOS ===== */
+.ex-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00004d;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"] {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #48d1cc;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(72, 209, 204, 0.15);
+}
+
+/* ===== RADIO BUTTONS ===== */
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    background: #f8fffe;
+    border-radius: 10px;
+    border: 2px solid #e8f8f7;
+}
+
+.radio-group legend {
+    font-size: 13px;
+    font-weight: 600;
+    color: #00004d;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.radio-item:hover {
+    background-color: #e8f8f7;
+}
+
+.radio-item input[type="radio"] {
+    accent-color: #48d1cc;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.radio-item label {
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    flex: 1;
+}
+
+.radio-item .op-symbol {
+    color: #48d1cc;
+    font-weight: 700;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+/* ===== BOTÕES ===== */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    text-transform: uppercase;
+}
+
+.btn-primary {
+    background-color: #00004d;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #48d1cc;
+    color: #00004d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(72, 209, 204, 0.4);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #666;
+    border: 2px solid #e0e0e0;
+}
+
+.btn-secondary:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+    color: #333;
+}
+
+/* ===== CALCULADORA (botões de operação) ===== */
+.calc-operations {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.calc-operations input[type="submit"] {
+    padding: 14px 8px;
+    background-color: #00004d;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.calc-operations input[type="submit"]:hover {
+    background-color: #48d1cc;
+    color: #00004d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 209, 204, 0.4);
+}
+
+.calc-operations input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* ===== RESULTADO ===== */
+.result-box {
+    margin-top: 20px;
+    padding: 16px;
+    background: linear-gradient(135deg, #f0fafa 0%, #e8f8f7 100%);
+    border-left: 4px solid #48d1cc;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #00004d;
+    font-weight: 600;
+}
+
+/* ===== FOOTER ===== */
+.ex-footer {
+    background-color: #00004d;
+    color: #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    margin-top: auto;
+    font-size: 13px;
+}
+
+.ex-footer a {
+    color: #48d1cc;
+    text-decoration: none;
+}
+
+.ex-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 600px) {
+    .ex-card {
+        padding: 28px 20px;
+    }
+
+    .ex-header h1 {
+        font-size: 24px;
+    }
+
+    .calc-operations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+}
+
+/* ===== SELECT ===== */
+.ex-select {
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3e%3cpath fill='%2348d1cc' d='M6 8L0 0h12z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+}
+
+.ex-select:focus {
+    outline: none;
+    border-color: #48d1cc;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(72, 209, 204, 0.15);
+}
+
+/* ===== TABELA DE DADOS (cadastro.php) ===== */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table tr {
+    border-bottom: 1px solid #e8f8f7;
+}
+
+.data-table tr:last-child {
+    border-bottom: none;
+}
+
+.data-table td {
+    padding: 14px 20px;
+    vertical-align: middle;
+}
+
+.data-label {
+    background: #f8fffe;
+    color: #00004d;
+    font-weight: 600;
+    font-size: 14px;
+    width: 140px;
+    white-space: nowrap;
+}
+
+.data-value {
+    color: #333;
+    font-size: 15px;
+    word-break: break-word;
+}
+
+@media (max-width: 600px) {
+    .data-table td {
+        display: block;
+        padding: 8px 16px;
+    }
+    .data-label {
+        width: 100%;
+        padding-bottom: 2px;
+        border-bottom: none;
+    }
+    .data-value {
+        padding-top: 2px;
+    }
+}

@@ -1,86 +1,89 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<meta charset="utf-8"> <!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<link rel="shortcut icon" href="img/icone.ico"> <!-- codigo para colocar icone no site -->	
-	<link rel="stylesheet" type="text/css" href="CSS/estilos.css"> <!-- diretório para o css -->
-	<title>Calculadora Complexa</title> <!-- título do site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 — JS</title>
+    <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos-exercicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<script type="text/javascript">
-	function horario(){
-		hoje = new Date();
+<body>
 
-		hora = hoje.getHours();
-		if (hora < 10)
-			hora = "0" + hora;
+    <header class="ex-header">
+        <h1>Atividade 2 — JS</h1>
+        <p>Calculadora com PHP</p>
+    </header>
 
-		minutos = hoje.getMinutes();
-		if (minutos < 10)
-			minutos = "0" + minutos;
+    <div class="clock-bar" id="clock">00:00:00</div>
 
-		segundos = hoje.getSeconds();
-		if (segundos < 10)
-			segundos = "0" + segundos;
+    <main class="ex-main">
+        <div class="ex-card">
+            <h2>Calculadora</h2>
+            <p class="subtitle">Informe os valores e escolha a operação</p>
 
-		document.form1.horaatual.value = hora+":"+minutos+":"+segundos;
+            <form action="" method="post" class="ex-form">
+                <div class="form-group">
+                    <label for="num1">Primeiro número</label>
+                    <input type="number" id="num1" name="num1" step="any" placeholder="Ex: 10" required>
+                </div>
+                <div class="form-group">
+                    <label for="num2">Segundo número</label>
+                    <input type="number" id="num2" name="num2" step="any" placeholder="Ex: 5" required>
+                </div>
 
-	}
-window.setInterval("horario()", 1000);
-</script>
-<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-<body class="container"> <!-- class - usado para criar uma classe em que será, possivelmente modificado -->
-	<header> <!-- ESTE É O CABEÇALHO DO SITE -->
-		<div class="logo">
-			<center><img src="IMG/logotipo.png" alt="logotipo" height="150px"></center>
-		<center><h1>Calculadora com PHP</h1></center> <!-- center - usado para centralizar algo -->
-			<center><img src="IMG/logotipo.png" alt="logotipo" height="150px"></center>
-		</div>
-		<nav id="menu">
-			
-			<ul>
-				<li><a href="index.html">HOME</a></li>
-				<li><a href="Atividades.html">ATIVIDADES 2020</a></li>
-				<li><a href="techmagicweb.html">TECHMAGIC - WEB</a></li>
-				<li><a href="site do gabriel-umpouco sobre mim.html">CONTATOS</a></li>
-			</ul>
-			
-		</nav>
-		<script type="text/javascript">
-			$("ul").hide(); //hide - esconder
-			$("ul").show("slow");
+                <label style="font-size:13px;font-weight:600;color:#00004d;letter-spacing:0.5px;text-transform:uppercase;">
+                    Operação:
+                </label>
+                <div class="calc-operations">
+                    <input type="submit" name="operacao" value="+">
+                    <input type="submit" name="operacao" value="−">
+                    <input type="submit" name="operacao" value="×">
+                    <input type="submit" name="operacao" value="÷">
+                </div>
+            </form>
 
-			$("a").click(function(){
-			$("ul").show("slow");	
-			});
-		</script>
-	</header>
-	<main class="grid">
-		<!-- primeira sessão -->
-		<section class="grid-item"> <!-- section - usado para fazer uma sessão expecífica para cada parte em que for demarcada com a grid -->
-			<form action="" method="post" >
-      Primeiro Numero: <input name="num1" type="text"><br>
-      Segundo numero: <input name="num2" type="text"><br>
-      <input type="submit" name="operacao" value="+">     
-      <input type="submit" name="operacao" value="-">     
-      <input type="submit" name="operacao" value="*">     
-      <input type="submit" name="operacao" value="/">     
-   </form> 
-<?php
+            <?php
+                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacao'])) {
+                    $a = floatval($_POST['num1']);
+                    $b = floatval($_POST['num2']);
+                    $op = $_POST['operacao'];
 
-   $a = $_POST['num1'];
-   $b = $_POST['num2'];
-   $op= $_POST['operacao'];
+                    switch ($op) {
+                        case '+': $c = $a + $b; break;
+                        case '−': $c = $a - $b; break;
+                        case '×': $c = $a * $b; break;
+                        case '÷':
+                            if ($b == 0) {
+                                echo '<div class="result-box" style="border-left-color:#DC143C;">⚠️ Divisão por zero não é permitida.</div>';
+                                break;
+                            }
+                            $c = $a / $b;
+                            break;
+                    }
 
-   if( !empty($op) ) {
-      if($op == '+')
-         $c = $a + $b;
-      else if($op == '-')
-         $c = $a - $b;
-      else if($op == '*')
-         $c = $a*$b;
-      else
-         $c = $a/$b;
+                    if (isset($c)) {
+                        echo "<div class='result-box'>Resultado: <strong>{$a} {$op} {$b} = {$c}</strong></div>";
+                    }
+                }
+            ?>
+        </div>
+    </main>
 
-      echo "O resultado da opera&ccedil;&atilde;o &eacute;: $c";
-   }
+    <footer class="ex-footer">
+        <p>Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — 2EMCC</p>
+    </footer>
 
-?>    
+    <script>
+        function horario() {
+            const hoje = new Date();
+            const h = String(hoje.getHours()).padStart(2, '0');
+            const m = String(hoje.getMinutes()).padStart(2, '0');
+            const s = String(hoje.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+        }
+        setInterval(horario, 1000);
+        horario();
+    </script>
+</body>
+</html>

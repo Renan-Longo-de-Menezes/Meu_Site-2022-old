@@ -1,98 +1,51 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<meta charset="utf-8" http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<link rel="shortcut icon" href="img/estrela.ico"> <!-- codigo para colocar icone no site -->	
-	<link rel="stylesheet" type="text/css" href="css/estilos12.css"> <!-- diretório para o css -->
-	<title>Cadastro em Banco de Dados</title> <!-- título do site -->
-		<script type="text/javascript">
-			$("ul").hide(); //hide - esconder
-			$("ul").show("slow");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro</title>
+    <link rel="shortcut icon" href="img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos-exercicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-			$("a").click(function(){
-			$("ul").show("slow");	
-			});
-		</script>
-	<main class="grid">
-		<!-- primeira sessão -->
-		<section class="grid-item"> <!-- section - usado para fazer uma sessão expecífica para cada parte em que for demarcada com a grid -->
-			<form action="php/logar.php" method="post" enctype="multipart/form-data" name="formlogin">
-				<table width="631" border="0" cellpadding="0" cellspacing="0">
-  					<!--DWLayoutTable-->
-  				<tr>
-    				<td width="246" height="25">&nbsp;</td>
-    				<td width="79">&nbsp;</td>
-   					<td width="24">&nbsp;</td>
-    				<td width="48">&nbsp;</td>
-    				<td width="71">&nbsp;</td>
-    				<td width="25">&nbsp;</td>
-    				<td width="52">&nbsp;</td>
-    				<td width="1000">&nbsp;</td>
-    			</tr>
-  				<tr>
-    				<td height="46">&nbsp;</td>
-    				<td colspan="8" valign="top"><span class="style1">Sistema de Cadastro</span></td>
-    				<td>&nbsp;</td>
-    			</tr>
-  				<tr>
-    				<td height="35">&nbsp;</td>
-    				<td>&nbsp;</td>
-   	 				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-   	 				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-   		 		</tr>
-  				<tr>
-    				<td height="52">&nbsp;</td>
-    				<td colspan="5" valign="top"><table width="100%" border="2" bordercolor="#FFFFFF" cellpadding="0" cellspacing="0">
-      				<!--DWLayoutTable-->
-      			<tr>
-        			<td width="70" height="24" align="right" valign="middle" bgcolor="#add8e6"><span class="style2">Login:</span></td>
-            		<td width="169" valign="middle" bgcolor="#CCCCCC"><label for="textfield"></label>
-            		<input name="login" type="text" id="login" maxlength="200" /></td>
-          		</tr>
-      			<tr>
-        			<td height="24" align="right" valign="middle" bgcolor="#add8e6" class="style2">Senha:</td>
-            		<td valign="middle" bgcolor="#CCCCCC"><label for="label"></label>
-              		<input name="senha" type="password" id="label" maxlength="15" /></td>
-         		</tr>
-    			</table></td>
-    			<td>&nbsp;</td>
-    			<td>&nbsp;</td>
-  				</tr>
-  				<tr>
-    				<td height="24"></td>
-    				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-    				<td valign="top"><label for="Submit"></label>
-      				<input type="submit" name="logar" value="LOGAR" id="logar" /></td>
-    				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-    				<td></td>
-    				<td></td>
-  				</tr>
-  				<tr>
-    				<td height="23"></td>
-    				<td colspan="2" valign="middle"><a href="php/cadastro2.php" class="style3">Cadastre-se</a></td>
-    				<td>&nbsp;</td>
-    				<td colspan="4" valign="middle"><a href="php/lembrar_senha.php" class="style3">Esqueceu a senha?</a> </td>
-    				<td>&nbsp;</td>
-    				<td></td>
-    				<td></td>
-  				</tr>
-  				<tr>
-    				<td height="46"></td>
-    				<td>&nbsp;</td>
-   					<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-    				<td>&nbsp;</td>
-    				<td></td>
-    				<td></td>
-  				</tr>
-			</table>
-		</form>
+    <header class="ex-header">
+        <h1>Sistema de Cadastro</h1>
+        <p>Login e autenticação</p>
+    </header>
 
-		</section>
-		</html>
+    <main class="ex-main">
+        <div class="ex-card login-card">
+            <div class="login-icon">🔐</div>
+            <h2>Bem-vindo</h2>
+            <p class="subtitle">Faça login para acessar o sistema</p>
+
+            <form action="php/logar.php" method="post" enctype="multipart/form-data" name="formlogin" class="ex-form">
+                <div class="form-group">
+                    <label for="login">Login</label>
+                    <input type="text" id="login" name="login" maxlength="200" placeholder="Seu usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" maxlength="15" placeholder="Sua senha" required>
+                </div>
+
+                <div class="form-actions">
+                    <input type="submit" name="logar" value="LOGAR" class="btn btn-primary">
+                </div>
+
+                <div class="login-links">
+                    <a href="php/cadastro2.php" class="login-link">Cadastre-se</a>
+                    <span class="login-separator">•</span>
+                    <a href="php/lembrar_senha.php" class="login-link">Esqueceu a senha?</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="ex-footer">
+        <p>Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — 2EMCC</p>
+    </footer>
+</body>
+</html>

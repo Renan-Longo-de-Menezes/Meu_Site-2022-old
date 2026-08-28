@@ -1,405 +1,267 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<meta charset="utf-8" http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> <!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<link rel="shortcut icon" href="../img/estrela.ico"> <!-- codigo para colocar icone no site -->	
-	<link rel="stylesheet" type="text/css" href="../css/estilos12.css"> <!-- diretório para o css -->
-	<title>Cadastro em Banco de Dados</title> <!-- título do site -->
-<style type="text/css">
-    
-    </script>
-<script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
-<body class="container"> <!-- class - usado para criar uma classe em que será, possivelmente modificado -->
-	<header> <!-- ESTE É O CABEÇALHO DO SITE -->
-		<div class="logo">
-			<center><img src="../img/icone.ico" alt="logotipo" height="150px"></center>
-		<center><h1>Cadastro em Banco de Dados</h1></center> <!-- center - usado para centralizar algo -->
-			<center><img src="../img/icone.ico" alt="logotipo" height="150px"></center>
-		</div>
-		<nav id="menu">
-			
-			<ul>
-				<li><a href="../index.html">HOME</a></li>
-				<li><a href="../index2.html">SITES PASSADOS</a></li>
-				<li><a href="../techmagicweb.html">TECHMAGIC - WEB</a></li>
-				<li><a href="../contatos.html">CONTATOS</a></li>
-			</ul>
-			
-		</nav>
-		<script type="text/javascript">
-			$("ul").hide(); //hide - esconder
-			$("ul").show("slow");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário</title>
+    <link rel="shortcut icon" href="../img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilos-exercicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .cadastro-card { max-width: 640px; }
 
-			$("a").click(function(){
-			$("ul").show("slow");	
-			});
-		</script>
-	</header>
-	<main class="grid">
-		<!-- primeira sessão -->
-		<section class="grid-item"> <!-- section - usado para fazer uma sessão expecífica para cada parte em que for demarcada com a grid -->
-			<form action="cadastra_usuario.php" method="post" enctype="multipart/form-data" name="formcadastro">
-				<table width="753" border="0" cellpadding="0" cellspacing="0">
-  				<!--DWLayoutTable-->
-  				<tr>
-    				<td width="138" height="16"></td>
-    				<td width="64"></td>
-    				<td width="36"></td>
-    				<td width="11"></td>
-				    <td width="61"></td>
-				    <td width="59"></td>
-				    <td width="17"></td>
-				    <td width="28"></td>
-				    <td width="65"></td>
-				    <td width="77"></td>
-				    <td width="44"></td>
-				    <td width="44"></td>
-				    <td width="109"></td>
-				</tr>
-				<tr>
-				    <td height="48"></td>
-				    <td></td>
-				    <td></td>
-				    <td colspan="9" valign="top" align="center"><span class="style1">Cadastro de Usuários </span></td>
-				    <td>&nbsp;</td>
-				    <td></td>
-				    <td></td>
-				</tr>
-				<tr>
-				    <td height="15"></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-  				</tr>
-  				<tr>
-				    <td height="22"></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td colspan="3" valign="top" align="center"><a href="index.php">Home</a></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				</tr>
-				<tr>
-				    <td height="45">&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td colspan="11" valign="top"><p><strong>Insira os seus dados para que possamos efetuar o cadastro!<br />
-						<span class="style2">Aten&ccedil;&atilde;o:</span> Os campos que contiverem (<span class="style2">*</span>) s&atilde;o obrigatórios!
-				    </strong></p></td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				</tr>
-				<tr>
-				    <td height="24">&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td colspan="9" align="left" valign="middle" class="style9"></td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				</tr>
-				<tr>
-				    <td height="344">&nbsp;</td>
-				    <td colspan="12" valign="top"><table width="100%" border="2" bordercolor="#FFFFFF" cellpadding="0" cellspacing="0">
-				      <!--DWLayoutTable-->
-				<tr>
-				    <td width="149" rowspan="2" align="right" valign="middle" bgcolor="#000000"><span class="style3">Login:</span></td>
-				    <td width="349" height="24" valign="middle" bgcolor="#CCCCCC"><label for="textfield"></label>
-				    <input name="login" type="text" id="login" size="40" maxlength="200" />
-				        <span class="style9">*</span></td>
-				</tr>
-				<tr>
-				    <td height="2"></td>
-				</tr>
-			    <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Senha:</td>
-			        <td valign="middle" bgcolor="#CCCCCC"><label for="label"></label>
-			            <input name="senha" type="password" id="label" size="20" maxlength="15" />
-			            <span class="style9">*</span><span class="style5"> No m&aacute;ximo 15 caracteres!</span></td>
-			    </tr>
-			    <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Repetir senha: </td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label2"></label>
-			            <input name="rep_senha" type="password" id="label2" size="20" maxlength="15" />
-			        <span class="style9">*</span></td>
-			    </tr>
-			    <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Nome:</td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label3"></label>
-			            <input name="nome" type="text" id="label3" size="40" maxlength="200" />
-			        <span class="style9">*</span></td>
-			    </tr>
-			    <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">E-mail:</td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label4"></label>
-			              <input name="email" type="text" id="label4" size="40" maxlength="200" />
-			        <span class="style9">*</span></td>
-			    </tr>
-			    <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Sexo:</td>
-			            <td valign="middle" bgcolor="#CCCCCC"><input name="sexo" type="radio" value="Masculino" id="radiobutton" />
-			              <label for="radiobutton">Masculino 
-			              <input name="sexo" type="radio" value="Feminino" id="radio" />
-			        Feminino<span class="style9">*</span></label></td>
-			    </tr>
-			    <tr>
-        		<td height="26" align="right" valign="middle" bgcolor="#000000" class="style3">Data de nascimento: </td>
-          			<td valign="middle" bgcolor="#CCCCCC">Dia
-			            <label for="select"></label>
-			              <select name="dia" id="dia">
-			                <option value="">  </option>
-							<option value="01">01</option>
-			                <option value="02">02</option>
-			                <option value="03">03</option>
-			                <option value="04">04</option>
-			                <option value="05">05</option>
-			                <option value="06">06</option>
-			                <option value="07">07</option>
-			                <option value="08">08</option>
-			                <option value="09">09</option>
-			                <option value="10">10</option>
-			                <option value="11">11</option>
-			                <option value="12">12</option>
-			                <option value="13">13</option>
-			                <option value="14">14</option>
-			                <option value="15">15</option>
-			                <option value="16">16</option>
-			                <option value="17">17</option>
-			                <option value="18">18</option>
-			                <option value="19">19</option>
-			                <option value="20">20</option>
-			                <option value="21">21</option>
-			                <option value="22">22</option>
-			                <option value="23">23</option>
-			                <option value="24">24</option>
-			                <option value="25">25</option>
-			                <option value="26">26</option>
-			                <option value="27">27</option>
-			                <option value="28">28</option>
-			                <option value="29">29</option>
-			                <option value="30">30</option>
-			                <option value="31">31</option>
-			              </select>
-			              / M&ecirc;s
-			              <label for="label5"></label>
-			              <select name="mes" id="label5">
-			                <option value="">  </option>
-			                <option value="01">Janeiro</option>
-			                <option value="02">Fevereiro</option>
-			                <option value="03">Mar&ccedil;o</option>
-			                <option value="04">Abril</option>
-			                <option value="05">Maio</option>
-			                <option value="06">Junho</option>
-			                <option value="07">Julho</option>
-			                <option value="08">Agosto</option>
-			                <option value="09">Setembro</option>
-			                <option value="10">Outubro</option>
-			                <option value="11">Novembro</option>
-			                <option value="12">Dezembro</option>
-			              </select>
-			              / Ano
-			              <label for="label6"></label>
-			              <select name="ano" id="label6">
-			                <option value="">  </option>
-			                <option value="1900">1900</option>
-			                <option value="1901">1901</option>
-			                <option value="1902">1902</option>
-			                <option value="1903">1903</option>
-			                <option value="1904">1904</option>
-			                <option value="1905">1905</option>
-			                <option value="1906">1906</option>
-			                <option value="1907">1907</option>
-			                <option value="1908">1908</option>
-			                <option value="1909">1909</option>
-			                <option value="1910">1910</option>
-			                <option value="1911">1911</option>
-			                <option value="1912">1912</option>
-			                <option value="1913">1913</option>
-			                <option value="1914">1914</option>
-			                <option value="1915">1915</option>
-			                <option value="1916">1916</option>
-			                <option value="1917">1917</option>
-			                <option value="1918">1918</option>
-			                <option value="1919">1919</option>
-			                <option value="1920">1920</option>
-			                <option value="1921">1921</option>
-			                <option value="1922">1922</option>
-			                <option value="1923">1923</option>
-			                <option value="1924">1924</option>
-			                <option value="1925">1925</option>
-			                <option value="1926">1926</option>
-			                <option value="1927">1927</option>
-			                <option value="1928">1928</option>
-			                <option value="1929">1929</option>
-			                <option value="1930">1930</option>
-			                <option value="1931">1931</option>
-			                <option value="1932">1932</option>
-			                <option value="1933">1933</option>
-			                <option value="1934">1934</option>
-			                <option value="1935">1935</option>
-			                <option value="1936">1936</option>
-			                <option value="1937">1937</option>
-			                <option value="1938">1938</option>
-			                <option value="1939">1939</option>
-			                <option value="1940">1940</option>
-			                <option value="1941">1941</option>
-			                <option value="1942">1942</option>
-			                <option value="1943">1943</option>
-			                <option value="1944">1944</option>
-			                <option value="1945">1945</option>
-			                <option value="1946">1946</option>
-			                <option value="1947">1947</option>
-			                <option value="1948">1948</option>
-			                <option value="1949">1949</option>
-			                <option value="1950">1950</option>
-			                <option value="1951">1951</option>
-			                <option value="1952">1952</option>
-			                <option value="1953">1953</option>
-			                <option value="1954">1954</option>
-			                <option value="1955">1955</option>
-			                <option value="1956">1956</option>
-			                <option value="1957">1957</option>
-			                <option value="1958">1958</option>
-			                <option value="1959">1959</option>
-			                <option value="1960">1960</option>
-			                <option value="1961">1961</option>
-			                <option value="1962">1962</option>
-			                <option value="1963">1963</option>
-			                <option value="1964">1964</option>
-			                <option value="1965">1965</option>
-			                <option value="1966">1966</option>
-			                <option value="1967">1967</option>
-			                <option value="1968">1968</option>
-			                <option value="1969">1969</option>
-			                <option value="1970">1970</option>
-			                <option value="1971">1971</option>
-			                <option value="1972">1972</option>
-			                <option value="1973">1973</option>
-			                <option value="1974">1974</option>
-			                <option value="1975">1975</option>
-			                <option value="1976">1976</option>
-			                <option value="1977">1977</option>
-			                <option value="1978">1978</option>
-			                <option value="1979">1979</option>
-			                <option value="1980">1980</option>
-			                <option value="1981">1981</option>
-			                <option value="1982">1982</option>
-			                <option value="1983">1983</option>
-			                <option value="1984">1984</option>
-			                <option value="1985">1985</option>
-			                <option value="1986">1986</option>
-			                <option value="1987">1987</option>
-			                <option value="1988">1988</option>
-			                <option value="1989">1989</option>
-			                <option value="1990">1990</option>
-			                <option value="1991">1991</option>
-			                <option value="1992">1992</option>
-			                <option value="1993">1993</option>
-			                <option value="1994">1994</option>
-			                <option value="1995">1995</option>
-			                <option value="1996">1996</option>
-			                <option value="1997">1997</option>
-			                <option value="1998">1998</option>
-			                <option value="1999">1999</option>
-			                <option value="2000">2000</option>
-			                <option value="2001">2001</option>
-			                <option value="2002">2002</option>
-			                <option value="2003">2003</option>
-			                <option value="2004">2004</option>
-			                <option value="2005">2005</option>
-			                <option value="2006">2006</option>
-			                <option value="2007">2007</option>
-			              </select>
-			         <span class="style9">*</span></td>
-			    </tr>
-			      <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Pa&iacute;s:</td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label7"></label>
-			              <input name="pais" type="text" id="label7" size="30" maxlength="150" />
-			            <span class="style9">*</span></td>
-			          </tr>
-			      <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Estado:</td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label8"></label>
-			              <input name="estado" type="text" id="label8" size="30" maxlength="150" />
-			            <span class="style9">*</span></td>
-			          </tr>
-			      <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Cidade:</td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label9"></label>
-			              <input name="cidade" type="text" id="label9" size="30" maxlength="150" />
-			            <span class="style9">*</span></td>
-			          </tr>
-			      <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3"><p>CEP:</p></td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label10"></label>
-			              <input name="cep" type="text" id="label10" size="20" maxlength="50" />
-			            <span class="style9">*</span></td>
-			          </tr>
-			      <tr>
-			        <td height="24" colspan="2" align="center" valign="middle"><span class="style2">No campo da pergunta secreta n&atilde;o coloque o ponto de interga&ccedil;&atilde;o (?)!</span> </td>
-			          </tr>
-			      <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Pergunta secreta: </td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label11"></label>
-			              <input name="pergunta" type="text" id="label11" size="40" maxlength="200" />
-			            ?<span class="style9">*</span></td>
-			          </tr>
-			      <tr>
-			        <td height="24" align="right" valign="middle" bgcolor="#000000" class="style3">Resposta secreta: </td>
-			            <td valign="middle" bgcolor="#CCCCCC"><label for="label12"></label>
-			              <input name="resposta" type="text" id="label12" size="40" maxlength="200" />
-			            <span class="style9">*</span></td>
-			          </tr>
-				    </table></td>
-				    <td>&nbsp;</td>
-				  </tr>
-				  <tr>
-				    <td height="24">&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td colspan="4" valign="top" align="center"><label for="Submit"></label>
-				      <input type="submit" name="cadastrar" value="CADASTRAR" id="cadastrar" /></td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td colspan="3" valign="top" align="center"><label for="label13"></label>
-				      <input type="reset" name="limpar" value="LIMPAR DADOS" id="label13" /></td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				    <td>&nbsp;</td>
-				  </tr>
-				  
-				  <tr>
-				    <td height="17"></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				  </tr>
-			</table>
-		</form>
+        .form-section {
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        .form-section:last-of-type { border-bottom: none; }
 
-		</section>
-		
-	</main>
+        .form-section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #00004d;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        .form-section-title::before {
+            content: '';
+            width: 4px;
+            height: 18px;
+            background: #48d1cc;
+            border-radius: 2px;
+        }
+
+        .date-group {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            gap: 10px;
+        }
+        .date-group label {
+            font-size: 11px !important;
+            color: #666;
+        }
+
+        .radio-group-inline {
+            display: flex;
+            gap: 20px;
+            padding: 12px 16px;
+            background: #f8fffe;
+            border-radius: 8px;
+            border: 2px solid #e8f8f7;
+        }
+        .radio-group-inline .radio-item {
+            padding: 4px 8px;
+        }
+
+        .required-hint {
+            font-size: 12px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .required-hint span { color: #DC143C; font-weight: 700; }
+
+        .secret-hint {
+            background: #fff8e1;
+            border-left: 3px solid #ffc107;
+            padding: 10px 14px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #6d5a00;
+            margin-bottom: 16px;
+        }
+
+        .ex-select {
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            background-color: #fafafa;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            width: 100%;
+        }
+        .ex-select:focus {
+            outline: none;
+            border-color: #48d1cc;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(72, 209, 204, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="ex-header">
+        <h1>Cadastro de Usuário</h1>
+        <p>Cadastro em Banco de Dados</p>
+    </header>
+
+    <main class="ex-main">
+        <div class="ex-card cadastro-card">
+            <h2>📝 Novo Cadastro</h2>
+            <p class="subtitle">Preencha seus dados para criar uma conta</p>
+
+            <p class="required-hint">
+                Os campos marcados com <span>*</span> são obrigatórios.
+            </p>
+
+            <form action="cadastra_usuario.php" method="post" enctype="multipart/form-data" name="formcadastro" class="ex-form">
+
+                <!-- SEÇÃO: Acesso -->
+                <div class="form-section">
+                    <div class="form-section-title">Dados de Acesso</div>
+
+                    <div class="form-group">
+                        <label for="login">Login *</label>
+                        <input type="text" id="login" name="login" maxlength="200" placeholder="Escolha um nome de usuário" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha">Senha * <small style="color:#666;font-weight:400;">(máx. 15 caracteres)</small></label>
+                        <input type="password" id="senha" name="senha" maxlength="15" placeholder="Crie uma senha" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rep_senha">Repetir senha *</label>
+                        <input type="password" id="rep_senha" name="rep_senha" maxlength="15" placeholder="Confirme sua senha" required>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: Dados Pessoais -->
+                <div class="form-section">
+                    <div class="form-section-title">Dados Pessoais</div>
+
+                    <div class="form-group">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome" name="nome" maxlength="200" placeholder="Seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" maxlength="200" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Sexo *</label>
+                        <div class="radio-group-inline">
+                            <div class="radio-item">
+                                <input type="radio" id="sexo_m" name="sexo" value="Masculino" required>
+                                <label for="sexo_m">Masculino</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="sexo_f" name="sexo" value="Feminino" required>
+                                <label for="sexo_f">Feminino</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Data de nascimento *</label>
+                        <div class="date-group">
+                            <div>
+                                <label for="dia">Dia</label>
+                                <select id="dia" name="dia" class="ex-select" required>
+                                    <option value="">--</option>
+                                    <?php for ($i = 1; $i <= 31; $i++): ?>
+                                        <option value="<?= str_pad($i, 2, '0', STR_PAD_LEFT) ?>"><?= str_pad($i, 2, '0', STR_PAD_LEFT) ?></option>
+                                    <?php endfor; ?>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="mes">Mês</label>
+                                <select id="mes" name="mes" class="ex-select" required>
+                                    <option value="">--</option>
+                                    <option value="01">Janeiro</option>
+                                    <option value="02">Fevereiro</option>
+                                    <option value="03">Março</option>
+                                    <option value="04">Abril</option>
+                                    <option value="05">Maio</option>
+                                    <option value="06">Junho</option>
+                                    <option value="07">Julho</option>
+                                    <option value="08">Agosto</option>
+                                    <option value="09">Setembro</option>
+                                    <option value="10">Outubro</option>
+                                    <option value="11">Novembro</option>
+                                    <option value="12">Dezembro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="ano">Ano</label>
+                                <select id="ano" name="ano" class="ex-select" required>
+                                    <option value="">--</option>
+                                    <?php for ($y = 1900; $y <= 2007; $y++): ?>
+                                        <option value="<?= $y ?>"><?= $y ?></option>
+                                    <?php endfor; ?>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: Endereço -->
+                <div class="form-section">
+                    <div class="form-section-title">Endereço</div>
+
+                    <div class="form-group">
+                        <label for="pais">País *</label>
+                        <input type="text" id="pais" name="pais" maxlength="150" placeholder="Ex: Brasil" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="estado">Estado *</label>
+                        <input type="text" id="estado" name="estado" maxlength="150" placeholder="Ex: São Paulo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cidade">Cidade *</label>
+                        <input type="text" id="cidade" name="cidade" maxlength="150" placeholder="Ex: São Bernardo do Campo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cep">CEP *</label>
+                        <input type="text" id="cep" name="cep" maxlength="50" placeholder="00000-000" required>
+                    </div>
+                </div>
+
+                <!-- SEÇÃO: Pergunta Secreta -->
+                <div class="form-section">
+                    <div class="form-section-title">Pergunta Secreta</div>
+
+                    <div class="secret-hint">
+                        ⚠️ No campo da pergunta secreta, não coloque o ponto de interrogação (?)!
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pergunta">Pergunta secreta *</label>
+                        <input type="text" id="pergunta" name="pergunta" maxlength="200" placeholder="Ex: Qual o nome do meu primeiro animal?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resposta">Resposta secreta *</label>
+                        <input type="text" id="resposta" name="resposta" maxlength="200" placeholder="Sua resposta" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <input type="submit" name="cadastrar" value="CADASTRAR" class="btn btn-primary">
+                    <input type="reset" name="limpar" value="LIMPAR" class="btn btn-secondary">
+                </div>
+
+                <div class="login-links" style="margin-top:20px;">
+                    <a href="index.php" class="login-link">← Voltar ao início</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="ex-footer">
+        <p>Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — 2EMCC</p>
+    </footer>
+</body>
 </html>

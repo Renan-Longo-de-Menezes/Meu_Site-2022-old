@@ -1,115 +1,145 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <link rel="shortcut icon" href="img/estrela.ico"><!-- codigo para colocar icone no site -->
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<meta charset="utf-8"> 	<!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<title>Site Renan</title> <!-- título do site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atividades de Lógica 1º e 2º Bimestre - Site Renan">
+    <title>Lógica 1º e 2º Bim - Site Renan</title>
+    <link rel="shortcut icon" href="img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 </head>
-<body class="container"> <!--(bgcolor) ☜(ﾟヮﾟ☜) neste coloca-se a cor que desejar-->
-	<header>  <!-- ESTE É O CABEÇALHO DO SITE -->
-		<center><h1>Logica 1ºBim e 2ºBim</h1></center>
-	</header>
-	<main class="grid"> <!-- CONTEÚDO PRINCIPAL DO SITE -->
-		<script type="text/javascript">
-    
-        </script>
+<body class="container">
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Lógica — 1º e 2º Bimestre</h1>
+            <p class="header-subtitle">Algoritmos desenvolvidos</p>
+        </div>
+    </header>
+
+    <nav class="nav" id="main-nav">
+        <button class="nav-toggle" aria-label="Abrir menu" id="nav-toggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="atividades.html" class="nav-link">ATIVIDADES</a></li>
+            <li><a href="maissobremim.html" class="nav-link">Renan L. Menezes</a></li>
+            <li><a href="amostras.html" class="nav-link">AMOSTRAS</a></li>
+            <li><a href="contatos.html" class="nav-link">CONTATO</a></li>
+            <li><a href="opi.html" class="nav-link">TechMagic-WEB</a></li>
+        </ul>
+    </nav>
+
+    <main class="grid">
         <section class="grid-item">
-		<table style="width:100%">
-          <tr>
-            <th><h3><a href="index.html">HOME</a></h3></th>
-            <th><h3><a href="atividades.html">ATIVIDADES</a></h3></th>
-            <th><h3><a href="maissobremim.html">Renan L. Menezes</a></h3></th>
-            <th><h3><a href="amostras.html">AMOSTRAS</a></h3></th>
-            <th><h3><a href="contatos.html">CONTATO</a></h3></th>
-            <th><h3><a href="opi.html">TechMagic-WEB</a></h3></th>
-          </tr>
-        </table>
-		</section>		
-		<section class="grid-item">
-		<center></center>
-		<center><h3>Atividades de Logica 1ºBim e 2ºBim</h3></center>
-		<h4><span style='color:#000000'><h2 style="color:#48d1cc;">Algoritmo "MaiorMenor50"</h2>
-					<p>Var
-						numero, maior, menor, i: inteiro
+            <h2 class="section-title">Algoritmos de Lógica</h2>
 
+            <!-- Algoritmo 1 -->
+            <div class="algorithm-card">
+                <h3 class="algorithm-title">Algoritmo "MaiorMenor50"</h3>
+                <p class="algorithm-desc">Encontra o maior e o menor número entre 50 valores informados.</p>
+                <pre class="code-block"><code>Algoritmo "MaiorMenor50"
+Var
+    numero, maior, menor, i: inteiro
 
-						Inicio<br>
-						Escreva ("Entre com 1°número")<br>
-						leia (numero)<br>
-						menor <- numero<br>
-						<br>
-						maior <- numero<br>
-						para i de 2 ate 50 faca<br>
-						<br>
-						Escreva ("Entre com o",i,"numero:")<br>
-						<br>
-						leia(numero)<br>
-						se numero>maior entao<br>
-						maior<-numero<br>
-						<br>
-						fimse<br>
-						<br>
-						se numero<menor entao><br>
-						menor<-numero<br>
-						<br>
-						fimse<br>
-						fimpara<br>
-						<br>
-						Escreval("O maior número é:",maior)<br>
-						Escreval("O menor número é:",menor)<br>
-						<br>
-						Fimalgoritmo<br>
+Inicio
+    Escreva ("Entre com 1° número")
+    leia (numero)
+    menor <- numero
+    maior <- numero
 
-				</p>
-                        
-                        <h2 style="color:#48d1cc;">Algoritmo "VolumeDaEsfera"</h2>
-					
-	<br>
-	var<br>
-	          volume, parametro, raio : real<br>
+    para i de 2 ate 50 faca
+        Escreva ("Entre com o ", i, "° número:")
+        leia(numero)
 
-	inicio<br>
-	      // Entrada<br>
-	         leia(parametro)<br>
-	         leia(raio)<br>
-	      <br>
-	      // Processamento<br>
-	         volume <- 4/3 * parametro * raio^3<br>
-	      <br>
-	      // Saída<br>
-	         escreva (volume)<br>
-	<br>
-	Fimalgoritmo<br>
+        se numero > maior entao
+            maior <- numero
+        fimse
 
-			</p>
-        <h2 style="color:#48d1cc;">Algoritmo "Idades"</h2>
-					
-					<br>
-					Var<br>
-					<br>
-					 anos, dias:inteiro<br>
-					<br>
-					 funcao idade(x : inteiro) :inteiro<br>
-					  var idade2: inteiro<br>
-					  inicio<br>
-					  idade2<- x * 365<br>
-					  retorne idade2<br>
-					  fimfuncao<br>
-					<br>
-					Inicio<br>
-					<br>
-					escreval ("escreva sua idade")<br>
-					 leia (anos)<br>
-					 dias<- idade (anos)<br>
-					 escreval("em dias voce esta vivo á" , dias)<br>
-					<br>
-					Fimalgoritmo<br>
-		</section>
-	</main>
-	<footer>
-		<!-- CONTÉM INFORMAÇÕES SOBRE O AUTOR DA SEÇÃO DE DADOS, DIREITOS AUTORAIS OU LINKS PARA DOCUMENTOS RELACIONADOS -->
-	<center><h3>Desenvolvido por Renan Longo de Menezes - Nº24 - Turma: 2EMCC </h3>
-        <h3>E-mail para contato : renan.menezes@aluno.colegioanchietasbc.com.br </h3></center>
-	</footer>
+        se numero < menor entao
+            menor <- numero
+        fimse
+    fimpara
+
+    Escreval("O maior número é:", maior)
+    Escreval("O menor número é:", menor)
+Fimalgoritmo</code></pre>
+            </div>
+
+            <!-- Algoritmo 2 -->
+            <div class="algorithm-card">
+                <h3 class="algorithm-title">Algoritmo "VolumeDaEsfera"</h3>
+                <p class="algorithm-desc">Calcula o volume de uma esfera a partir do parâmetro π e do raio.</p>
+                <pre class="code-block"><code>Algoritmo "VolumeDaEsfera"
+Var
+    volume, parametro, raio : real
+
+Inicio
+    // Entrada
+    leia(parametro)
+    leia(raio)
+
+    // Processamento
+    volume <- 4/3 * parametro * raio^3
+
+    // Saída
+    escreva (volume)
+
+Fimalgoritmo</code></pre>
+            </div>
+
+            <!-- Algoritmo 3 -->
+            <div class="algorithm-card">
+                <h3 class="algorithm-title">Algoritmo "Idades"</h3>
+                <p class="algorithm-desc">Converte a idade em anos para dias usando uma função.</p>
+                <pre class="code-block"><code>Algoritmo "Idades"
+Var
+    anos, dias: inteiro
+
+    funcao idade(x : inteiro) : inteiro
+        var idade2: inteiro
+        inicio
+            idade2 <- x * 365
+            retorne idade2
+        fimfuncao
+
+Inicio
+    escreval ("Escreva sua idade")
+    leia (anos)
+    dias <- idade(anos)
+    escreval("Em dias você está vivo há ", dias)
+
+Fimalgoritmo</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-author">Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — Turma: 2EMCC</p>
+            <p class="footer-contact">
+                E-mail: <a href="mailto:renan.menezes@aluno.colegioanchietasbc.com.br" class="footer-link">
+                    renan.menezes@aluno.colegioanchietasbc.com.br
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const navList = document.getElementById('nav-list');
+        toggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list--open');
+            toggle.classList.toggle('nav-toggle--active');
+        });
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('nav-list--open');
+                toggle.classList.remove('nav-toggle--active');
+            });
+        });
+    </script>
 </body>
 </html>

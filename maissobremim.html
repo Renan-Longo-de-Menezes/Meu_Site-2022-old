@@ -1,42 +1,100 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <link rel="shortcut icon" href="img/estrela.ico"><!-- codigo para colocar icone no site -->
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<meta charset="utf-8"> 	<!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<title>Site Renan</title> <!-- título do site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sobre mim - Renan Longo de Menezes">
+    <title>Sobre mim - Site Renan</title>
+    <link rel="shortcut icon" href="img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="container"> <!--(bgcolor) ☜(ﾟヮﾟ☜) neste coloca-se a cor que desejar-->
-	<header>  <!-- ESTE É O CABEÇALHO DO SITE -->
-		<center><h1>Renan L. Menezes</h1></center>
-	</header>
-	<main class="grid"> <!-- CONTEÚDO PRINCIPAL DO SITE -->
-		<script type="text/javascript">
-   
-        </script>
-        <section class="grid-item">
-		<table style="width:100%">
-          <tr>
-            <th><h3><a href="index.html">HOME</a></h3></th>
-            <th><h3><a href="atividades.html">ATIVIDADES</a></h3></th>
-            <th><h3><a href="maissobremim.html">Renan L. Menezes</a></h3></th>
-            <th><h3><a href="amostras.html">AMOSTRAS</a></h3></th>
-            <th><h3><a href="contatos.html">CONTATO</a></h3></th>
-            <th><h3><a href="opi.html">TechMagic-WEB</a></h3></th>
-          </tr>
-        </table>
-		</section>		
-		<section class="grid-item">
-		<center><img src="img/logoRen2.png" alt="foto Renan" height="200px" width="350px"></center>
-		<center><h3>Um pouco sobre mim</h3></center>
-		<h4>Meu nome é Renan Longo de Menezes, nasci em 23-07-2004, sou aluno do tecnico de informatica, estou aplicando os conhecimentos que eu adquiri nas aulas de programação e escrevendo sobre assuntos que eu gosto. Eu desde pequeno assisto supernatural e outros filmes relacionados, pois sempre gostei muito do gênero suspence e terror, com o passar do tempo fui gostando muito do gênero ficção cientifica e de outros temas da cultura nerd como star wars e vingadores. Meu passa tempo favorito é jogar video game, principalmente com meus amigos. Minhas comidas favoritas são pizzas, panquecas e lasanhas.</h4>
-    <center><img src="img\PIZZA.jpg" alt="Pizza" width="350PX" height="200PX">
-    <img src="img\Star.jpg" alt="Star" width="350PX" height="200PX"></center>
-		</section>
-	</main>
-	<footer>
-		<!-- CONTÉM INFORMAÇÕES SOBRE O AUTOR DA SEÇÃO DE DADOS, DIREITOS AUTORAIS OU LINKS PARA DOCUMENTOS RELACIONADOS -->
-	<center><h3>Desenvolvido por Renan Longo de Menezes - Nº24 - Turma: 2EMCC </h3>
-        <h3>E-mail para contato : renan.menezes@aluno.colegioanchietasbc.com.br </h3></center>
-	</footer>
+<body class="container">
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Renan L. Menezes</h1>
+            <p class="header-subtitle">Um pouco sobre mim</p>
+        </div>
+    </header>
+
+    <nav class="nav" id="main-nav">
+        <button class="nav-toggle" aria-label="Abrir menu" id="nav-toggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="atividades.html" class="nav-link">ATIVIDADES</a></li>
+            <li><a href="maissobremim.html" class="nav-link active">Renan L. Menezes</a></li>
+            <li><a href="amostras.html" class="nav-link">AMOSTRAS</a></li>
+            <li><a href="contatos.html" class="nav-link">CONTATO</a></li>
+            <li><a href="opi.html" class="nav-link">TechMagic-WEB</a></li>
+        </ul>
+    </nav>
+
+    <main class="grid">
+        <section class="grid-item about-section">
+            <div class="about-layout">
+                <div class="about-photo">
+                    <img src="img/logoRen2.png" alt="Foto de Renan" class="about-img">
+                </div>
+                <div class="about-content">
+                    <h2>Um pouco sobre mim</h2>
+                    <p>
+                        Meu nome é <strong>Renan Longo de Menezes</strong>, nasci em 23/07/2004, sou aluno do 
+                        técnico de informática e estou aplicando os conhecimentos que adquiri nas aulas de 
+                        programação, escrevendo sobre assuntos que eu gosto.
+                    </p>
+                    <p>
+                        Desde pequeno assisto <em>Supernatural</em> e outros filmes relacionados, pois sempre 
+                        gostei muito do gênero suspense e terror. Com o passar do tempo, fui gostando muito do 
+                        gênero ficção científica e de outros temas da cultura nerd como <em>Star Wars</em> e 
+                        <em>Vingadores</em>.
+                    </p>
+                    <p>
+                        Meu passatempo favorito é jogar videogame, principalmente com meus amigos. Minhas 
+                        comidas favoritas são pizzas, panquecas e lasanhas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-gallery">
+                <figure class="gallery-item">
+                    <img src="img/PIZZA.jpg" alt="Pizza" class="gallery-img">
+                    <figcaption>Pizza — uma das minhas comidas favoritas 🍕</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="img/Star.jpg" alt="Star Wars" class="gallery-img">
+                    <figcaption>Star Wars — cultura nerd ⭐</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-author">Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — Turma: 2EMCC</p>
+            <p class="footer-contact">
+                E-mail: <a href="mailto:renan.menezes@aluno.colegioanchietasbc.com.br" class="footer-link">
+                    renan.menezes@aluno.colegioanchietasbc.com.br
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const navList = document.getElementById('nav-list');
+        toggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list--open');
+            toggle.classList.toggle('nav-toggle--active');
+        });
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('nav-list--open');
+                toggle.classList.remove('nav-toggle--active');
+            });
+        });
+    </script>
 </body>
 </html>

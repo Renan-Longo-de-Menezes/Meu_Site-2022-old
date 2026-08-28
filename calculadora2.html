@@ -1,35 +1,84 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<title>Portifólio</title>
-    </head>
-<main class="grid">
-		<!-- primeira sessão -->
-		<section class="grid-item"> <!-- section - usado para fazer uma sessão expecífica para cada parte em que for demarcada com a grid -->
-			<form action="php/calculadora.php" method="get">
-				Primeiro Número: <input type="text" name="num1" class="input1"> 
-				Segundo Número: <input type="text" name="num2" class="input1">
-				<p></p>
-				Operação desejada:
-				<p></p>
-				<input type="radio" name="opera" value="Soma"> Soma (+)
-				<p></p>
-				<input type="radio" name="opera" value="Subtração"> Subtração (-)
-				<p></p>
-				<input type="radio" name="opera" value="Multiplicação"> Multiplicação (*)
-				<p></p>
-				<input type="radio" name="opera" value="Divisão"> Divisão (/)
-				<p></p>
-				<input type="radio" name="opera" value="Porcentagem"> Porcentagem (%)
-				<p></p>
-				<input type="radio" name="opera" value="Potenciação"> Potenciação (^)
-				<p></p>
-				<input type="radio" name="opera" value="Resto"> Resto
-				<p></p>
-				<input type="submit" value="Calcular">
-			</form>
-		</section>
-		
-	</main>
-    
-    </html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Completa</title>
+    <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos-exercicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="ex-header">
+        <h1>Calculadora Completa</h1>
+        <p>7 operações disponíveis</p>
+    </header>
+
+    <main class="ex-main">
+        <div class="ex-card">
+            <h2>Portfólio — Calculadora</h2>
+            <p class="subtitle">Selecione a operação desejada</p>
+
+            <form action="php/calculadora.php" method="get" class="ex-form">
+                <div class="form-group">
+                    <label for="num1">Primeiro número</label>
+                    <input type="number" id="num1" name="num1" step="any" placeholder="Ex: 10" required>
+                </div>
+                <div class="form-group">
+                    <label for="num2">Segundo número</label>
+                    <input type="number" id="num2" name="num2" step="any" placeholder="Ex: 5" required>
+                </div>
+
+                <fieldset class="radio-group">
+                    <legend>Operação desejada</legend>
+
+                    <div class="radio-item">
+                        <input type="radio" id="soma" name="opera" value="Soma" checked>
+                        <label for="soma">Soma</label>
+                        <span class="op-symbol">+</span>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="sub" name="opera" value="Subtração">
+                        <label for="sub">Subtração</label>
+                        <span class="op-symbol">−</span>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="mult" name="opera" value="Multiplicação">
+                        <label for="mult">Multiplicação</label>
+                        <span class="op-symbol">×</span>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="div" name="opera" value="Divisão">
+                        <label for="div">Divisão</label>
+                        <span class="op-symbol">÷</span>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="porc" name="opera" value="Porcentagem">
+                        <label for="porc">Porcentagem</label>
+                        <span class="op-symbol">%</span>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="pot" name="opera" value="Potenciação">
+                        <label for="pot">Potenciação</label>
+                        <span class="op-symbol">^</span>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="resto" name="opera" value="Resto">
+                        <label for="resto">Resto</label>
+                        <span class="op-symbol">mod</span>
+                    </div>
+                </fieldset>
+
+                <div class="form-actions">
+                    <input type="submit" value="CALCULAR" class="btn btn-primary">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="ex-footer">
+        <p>Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — 2EMCC</p>
+    </footer>
+</body>
+</html>

@@ -1,52 +1,166 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <link rel="shortcut icon" href="img/estrela.ico"><!-- codigo para colocar icone no site -->
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<meta charset="utf-8"> 	<!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<title>Site Renan</title> <!-- título do site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atividades de Web - Site Renan">
+    <title>Web - Site Renan</title>
+    <link rel="shortcut icon" href="img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="container"> <!--(bgcolor) ☜(ﾟヮﾟ☜) neste coloca-se a cor que desejar-->
-	<header>  <!-- ESTE É O CABEÇALHO DO SITE -->
-		<center><h1>WEB</h1></center>
-	</header>
-	<main class="grid"> <!-- CONTEÚDO PRINCIPAL DO SITE -->
-		<script type="text/javascript">
-    
-        </script>
-        <section class="grid-item">
-		<table style="width:100%">
-          <tr>
-            <th><h3><a href="index.html">HOME</a></h3></th>
-            <th><h3><a href="atividades.html">ATIVIDADES</a></h3></th>
-            <th><h3><a href="maissobremim.html">Renan L. Menezes</a></h3></th>
-            <th><h3><a href="amostras.html">AMOSTRAS</a></h3></th>
-            <th><h3><a href="contatos.html">CONTATO</a></h3></th>
-            <th><h3><a href="opi.html">TechMagic-WEB</a></h3></th>
-          </tr>
-        </table>
-		</section>		
-		<section class="grid-item">
-		<center><img src="img/web.jpg" alt="imagem WEB" height="200px" width="350px"></center>
-		<center><h3>Atividades de WEB</h3></center>
-         <h3>Atividades 1EM</h3>
-		   <h4><a href="javascript.html">ATIVIDADES com Java Script</a></h4>
-         <h3>Atividades 2EM</h3>
-            <h4>1Bimestre:</h4>
-          <h4><a href="transform.html">Atividade Transform</a></h4>
-          <h4><a href="calculadora2.html">Atividade Calculadora Avançada</a></h4>
-            <h4>2Bimestre:</h4>
-		<p></p>
-            <h4><a href="ex1.html">Atividade EX.1</a></h4>
-            <h4><a href="ex2.php">Atividade EX.2</a></h4>
-            <h4><a href="ex3.php">Atividade EX.3</a></h4>
-            <h4>3imestre:</h4>
-            <h4><a href="sistema.html">Atividade EX1</a></h4>
-		</section>
-	</main>
-	<footer>
-		<!-- CONTÉM INFORMAÇÕES SOBRE O AUTOR DA SEÇÃO DE DADOS, DIREITOS AUTORAIS OU LINKS PARA DOCUMENTOS RELACIONADOS -->
-	<center><h3>Desenvolvido por Renan Longo de Menezes - Nº24 - Turma: 2EMCC </h3>
-        <h3>E-mail para contato : renan.menezes@aluno.colegioanchietasbc.com.br </h3></center>
-	</footer>
+<body class="container">
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Web</h1>
+            <p class="header-subtitle">Atividades de desenvolvimento web</p>
+        </div>
+    </header>
+
+    <nav class="nav" id="main-nav">
+        <button class="nav-toggle" aria-label="Abrir menu" id="nav-toggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="atividades.html" class="nav-link">ATIVIDADES</a></li>
+            <li><a href="maissobremim.html" class="nav-link">Renan L. Menezes</a></li>
+            <li><a href="amostras.html" class="nav-link">AMOSTRAS</a></li>
+            <li><a href="contatos.html" class="nav-link">CONTATO</a></li>
+            <li><a href="opi.html" class="nav-link">TechMagic-WEB</a></li>
+        </ul>
+    </nav>
+
+    <main class="grid">
+        <section class="grid-item activities-section">
+            <div class="activities-header">
+                <img src="img/web.jpg" alt="Web" class="activities-img">
+                <h2>Atividades de Web</h2>
+            </div>
+
+            <!-- 1º EM -->
+            <div class="activities-block">
+                <h3 class="block-title">
+                    <span class="block-badge">1EM</span>
+                    Atividades do 1º ano
+                </h3>
+                <div class="activities-list">
+                    <a href="javascript.html" class="activity-card">
+                        <div class="activity-icon">⚡</div>
+                        <div class="activity-info">
+                            <h4>Atividades com JavaScript</h4>
+                            <p>Exercícios práticos de JavaScript</p>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2º EM - 1º Bimestre -->
+            <div class="activities-block">
+                <h3 class="block-title">
+                    <span class="block-badge">2EM</span>
+                    1º Bimestre
+                </h3>
+                <div class="activities-list">
+                    <a href="transform.html" class="activity-card">
+                        <div class="activity-icon">🎨</div>
+                        <div class="activity-info">
+                            <h4>Atividade Transform</h4>
+                            <p>Demonstração de CSS Transform</p>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="calculadora2.html" class="activity-card">
+                        <div class="activity-icon">🧮</div>
+                        <div class="activity-info">
+                            <h4>Calculadora Avançada</h4>
+                            <p>Calculadora com múltiplas operações</p>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2º EM - 2º Bimestre -->
+            <div class="activities-block">
+                <h3 class="block-title">
+                    <span class="block-badge">2EM</span>
+                    2º Bimestre
+                </h3>
+                <div class="activities-list">
+                    <a href="ex1.html" class="activity-card">
+                        <div class="activity-icon">📋</div>
+                        <div class="activity-info">
+                            <h4>Atividade EX.1</h4>
+                            <p>Formulário de cadastro</p>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="ex2.php" class="activity-card">
+                        <div class="activity-icon">📋</div>
+                        <div class="activity-info">
+                            <h4>Atividade EX.2</h4>
+                            <p>Exercício com PHP</p>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                    <a href="ex3.php" class="activity-card">
+                        <div class="activity-icon">📋</div>
+                        <div class="activity-info">
+                            <h4>Atividade EX.3</h4>
+                            <p>Exercício com PHP</p>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 2º EM - 3º Bimestre -->
+            <div class="activities-block">
+                <h3 class="block-title">
+                    <span class="block-badge">2EM</span>
+                    3º Bimestre
+                </h3>
+                <div class="activities-list">
+                    <a href="sistema.html" class="activity-card">
+                        <div class="activity-icon">🔐</div>
+                        <div class="activity-info">
+                            <h4>Sistema de Login</h4>
+                            <p>Cadastro e autenticação em banco de dados</p>
+                        </div>
+                        <span class="activity-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-author">Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — Turma: 2EMCC</p>
+            <p class="footer-contact">
+                E-mail: <a href="mailto:renan.menezes@aluno.colegioanchietasbc.com.br" class="footer-link">
+                    renan.menezes@aluno.colegioanchietasbc.com.br
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const navList = document.getElementById('nav-list');
+        toggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list--open');
+            toggle.classList.toggle('nav-toggle--active');
+        });
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('nav-list--open');
+                toggle.classList.remove('nav-toggle--active');
+            });
+        });
+    </script>
 </body>
 </html>

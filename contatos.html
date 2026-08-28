@@ -1,45 +1,86 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <link rel="shortcut icon" href="img/estrela.ico"><!-- codigo para colocar icone no site -->
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<meta charset="utf-8"> 	<!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<title>Site Renan</title> <!-- título do site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contato - Site pessoal de Renan Longo de Menezes">
+    <title>Contato - Site Renan</title>
+    <link rel="shortcut icon" href="img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="container"> <!--(bgcolor) ☜(ﾟヮﾟ☜) neste coloca-se a cor que desejar-->
-	<header>  <!-- ESTE É O CABEÇALHO DO SITE -->
-		<center><h1>Contatos</h1></center>
-	</header>
-	<main class="grid"> <!-- CONTEÚDO PRINCIPAL DO SITE -->
-		<script type="text/javascript">
+<body class="container">
 
-        </script>
-        <section class="grid-item">
-		<table style="width:100%">
-          <tr>
-            <th><h3><a href="index.html">HOME</a></h3></th>
-            <th><h3><a href="atividades.html">ATIVIDADES</a></h3></th>
-            <th><h3><a href="maissobremim.html">Renan L. Menezes</a></h3></th>
-            <th><h3><a href="amostras.html">AMOSTRAS</a></h3></th>
-            <th><h3><a href="contatos.html">CONTATO</a></h3></th>
-            <th><h3><a href="opi.html">TechMagic-WEB</a></h3></th>
-          </tr>
-        </table>
-		</section>		
-		<section class="grid-item">
-		<center><img src="img/contato.jpg" alt="imagem cotato" height="200px" width="350px"></center>
-		<center><h3>Meu contato</h3></center>
-		<h4>
-		<p>renan.menezes@aluno.colegioanchietasbc.com.br</p>
-		<p></p>
-		</h4>
-		<p></p>
-            <h4></h4>
-		</section>
-	</main>
-	<footer>
-		<!-- CONTÉM INFORMAÇÕES SOBRE O AUTOR DA SEÇÃO DE DADOS, DIREITOS AUTORAIS OU LINKS PARA DOCUMENTOS RELACIONADOS -->
-	<center><h3>Desenvolvido por Renan Longo de Menezes - Nº24 - Turma: 2EMCC </h3>
-        <h3>E-mail para contato : renan.menezes@aluno.colegioanchietasbc.com.br </h3></center>
-	</footer>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Contato</h1>
+            <p class="header-subtitle">Entre em contato comigo</p>
+        </div>
+    </header>
+
+    <nav class="nav" id="main-nav">
+        <button class="nav-toggle" aria-label="Abrir menu" id="nav-toggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" class="nav-link">HOME</a></li>
+            <li><a href="atividades.html" class="nav-link">ATIVIDADES</a></li>
+            <li><a href="maissobremim.html" class="nav-link">Renan L. Menezes</a></li>
+            <li><a href="amostras.html" class="nav-link">AMOSTRAS</a></li>
+            <li><a href="contatos.html" class="nav-link active">CONTATO</a></li>
+            <li><a href="opi.html" class="nav-link">TechMagic-WEB</a></li>
+        </ul>
+    </nav>
+
+    <main class="grid">
+        <section class="grid-item contact-section">
+            <div class="contact-layout">
+                <div class="contact-image">
+                    <img src="img/contato.jpg" alt="Contato" class="contact-img">
+                </div>
+                <div class="contact-info">
+                    <h2>Meu contato</h2>
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <span class="contact-label">E-mail</span>
+                            <a href="mailto:renan.menezes@aluno.colegioanchietasbc.com.br" class="contact-email">
+                                renan.menezes@aluno.colegioanchietasbc.com.br
+                            </a>
+                        </div>
+                    </div>
+                    <a href="mailto:renan.menezes@aluno.colegioanchietasbc.com.br" class="btn btn-primary">
+                        Enviar e-mail
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-author">Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — Turma: 2EMCC</p>
+            <p class="footer-contact">
+                E-mail: <a href="mailto:renan.menezes@aluno.colegioanchietasbc.com.br" class="footer-link">
+                    renan.menezes@aluno.colegioanchietasbc.com.br
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('nav-toggle');
+        const navList = document.getElementById('nav-list');
+        toggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list--open');
+            toggle.classList.toggle('nav-toggle--active');
+        });
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('nav-list--open');
+                toggle.classList.remove('nav-toggle--active');
+            });
+        });
+    </script>
 </body>
 </html>

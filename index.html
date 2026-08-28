@@ -1,46 +1,114 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <link rel="shortcut icon" href="img/estrela.ico"><!-- codigo para colocar icone no site -->
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<meta charset="utf-8"> 	<!-- ESTA TAG EXIGE QUE OS NAVEGADORES USEM A TABELA CORRETA QUE CONTÉM ACENTUAÇÃO -->
-	<title>Site Renan</title> <!-- título do site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site pessoal de Renan Longo de Menezes - Projetos, atividades e portfólio">
+    <title>Site Renan</title>
+    <link rel="shortcut icon" href="img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="container"> <!--(bgcolor) ☜(ﾟヮﾟ☜) neste coloca-se a cor que desejar-->
-	<header>  <!-- ESTE É O CABEÇALHO DO SITE -->
-		<center><h1>Site Renan</h1></center>
-	</header>
-	<main class="grid"> <!-- CONTEÚDO PRINCIPAL DO SITE -->
-		<script type="text/javascript">
-    window.alert("Bem vindo")
-        </script>
-        <section class="grid-item">
-		<table style="width:100%">
-          <tr>
-            <th><h3><a href="index.html">HOME</a></h3></th>
-            <th><h3><a href="atividades.html">ATIVIDADES</a></h3></th>
-            <th><h3><a href="maissobremim.html">Renan L. Menezes</a></h3></th>
-            <th><h3><a href="amostras.html">AMOSTRAS</a></h3></th>
-            <th><h3><a href="contatos.html">CONTATO</a></h3></th>
-            <th><h3><a href="opi.html">TechMagic-WEB</a></h3></th>
-          </tr>
-        </table>
-		</section>		
-		<section class="grid-item">
-		<center><img src="img/logoRen.png" alt="imagem padrão" height="200px" width="350px"></center>
-		<center><h3>Bem vindo</h3></center>
-		<h4>
-		<p></p>
-		
-		<p></p>
-		</h4>
-		<p></p>
-            <h4></h4>
-		</section>
-	</main>
-	<footer>
-		<!-- CONTÉM INFORMAÇÕES SOBRE O AUTOR DA SEÇÃO DE DADOS, DIREITOS AUTORAIS OU LINKS PARA DOCUMENTOS RELACIONADOS -->
-	<center><h3>Desenvolvido por Renan Longo de Menezes - Nº24 - Turma: 2EMCC </h3>
-        <h3>E-mail para contato : renan.menezes@aluno.colegioanchietasbc.com.br </h3></center>
-	</footer>
+<body class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="header-title">Site Renan</h1>
+            <p class="header-subtitle">Portfólio pessoal & projetos</p>
+        </div>
+    </header>
+
+    <!-- NAVEGAÇÃO -->
+    <nav class="nav" id="main-nav">
+        <button class="nav-toggle" aria-label="Abrir menu" id="nav-toggle">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="index.html" class="nav-link active">HOME</a></li>
+            <li><a href="atividades.html" class="nav-link">ATIVIDADES</a></li>
+            <li><a href="maissobremim.html" class="nav-link">Renan L. Menezes</a></li>
+            <li><a href="amostras.html" class="nav-link">AMOSTRAS</a></li>
+            <li><a href="contatos.html" class="nav-link">CONTATO</a></li>
+            <li><a href="opi.html" class="nav-link">TechMagic-WEB</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="grid">
+        <section class="grid-item hero-section">
+            <div class="hero-content">
+                <div class="hero-image-wrapper">
+                    <img src="img/logoRen.png" alt="Logo Renan" class="hero-image">
+                </div>
+                <div class="hero-text">
+                    <h2>Bem-vindo!</h2>
+                    <p class="hero-description">
+                        Este é meu espaço pessoal, onde compartilho projetos, atividades e um pouco sobre mim. 
+                        Navegue pelas seções acima para conhecer mais.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="maissobremim.html" class="btn btn-primary">Sobre mim</a>
+                        <a href="contatos.html" class="btn btn-secondary">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards de acesso rápido -->
+        <section class="grid-item cards-section">
+            <h3 class="section-title">Navegue pelo site</h3>
+            <div class="cards-grid">
+                <a href="atividades.html" class="card">
+                    <div class="card-icon">📚</div>
+                    <h4>Atividades</h4>
+                    <p>Confira as atividades e projetos desenvolvidos.</p>
+                </a>
+                <a href="amostras.html" class="card">
+                    <div class="card-icon">🎨</div>
+                    <h4>Amostras</h4>
+                    <p>Veja exemplos e amostras dos trabalhos.</p>
+                </a>
+                <a href="opi.html" class="card">
+                    <div class="card-icon">💻</div>
+                    <h4>TechMagic-WEB</h4>
+                    <p>Conheça o projeto TechMagic-WEB.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-author">Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — Turma: 2EMCC</p>
+            <p class="footer-contact">
+                E-mail: <a href="mailto:renan.menezes@aluno.colegioanchietasbc.com.br" class="footer-link">
+                    renan.menezes@aluno.colegioanchietasbc.com.br
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile toggle
+        const toggle = document.getElementById('nav-toggle');
+        const navList = document.getElementById('nav-list');
+
+        toggle.addEventListener('click', () => {
+            navList.classList.toggle('nav-list--open');
+            toggle.classList.toggle('nav-toggle--active');
+        });
+
+        // Fecha menu ao clicar em um link (mobile)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('nav-list--open');
+                toggle.classList.remove('nav-toggle--active');
+            });
+        });
+    </script>
 </body>
 </html>

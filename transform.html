@@ -1,27 +1,97 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-<style> 
-div {
-  width: 775px;
-  height: 775px;
-  background: url(img/roda.jpg);
-  transition: width 2s, height 2s, transform 1s;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Transform - CSS</title>
+    <link rel="shortcut icon" href="img/estrela.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos-exercicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos específicos desta demo */
+        .transform-demo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
 
-div:hover {
-  width: 775px;
-  height: 775px;
-  transform: rotate(50rad);
-}
-</style>
+        .transform-box {
+            width: 300px;
+            height: 300px;
+            background: url('img/roda.jpg') center/cover no-repeat;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 1s ease, box-shadow 0.5s ease;
+            cursor: pointer;
+        }
+
+        .transform-box:hover {
+            transform: rotate(360deg) scale(1.05);
+            box-shadow: 0 12px 40px rgba(72, 209, 204, 0.4);
+        }
+
+        .transform-hint {
+            font-size: 13px;
+            color: #666;
+            font-style: italic;
+            text-align: center;
+        }
+
+        .transform-info {
+            background: #f8fffe;
+            border-left: 4px solid #48d1cc;
+            padding: 16px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+            width: 100%;
+        }
+
+        .transform-info code {
+            background: #00004d;
+            color: #48d1cc;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Fira Code', monospace;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .transform-box {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<h1></h1>
+    <header class="ex-header">
+        <h1>Atividade Transform</h1>
+        <p>Demonstração de CSS Transform</p>
+    </header>
 
+    <main class="ex-main">
+        <div class="ex-card">
+            <h2>CSS Transform</h2>
+            <p class="subtitle">Passe o mouse sobre a imagem</p>
 
-<div></div>
+            <div class="transform-demo">
+                <div class="transform-box" aria-label="Imagem demonstrativa com efeito de rotação"></div>
+                <p class="transform-hint">↑ Passe o cursor aqui ↑</p>
 
-<p><b></p>
+                <div class="transform-info">
+                    <strong>O que está acontecendo:</strong><br>
+                    A propriedade <code>transform: rotate()</code> aplica uma rotação ao elemento. 
+                    Combinada com <code>transition</code>, cria uma animação suave ao passar o mouse.
+                </div>
+            </div>
+        </div>
+    </main>
 
+    <footer class="ex-footer">
+        <p>Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — 2EMCC</p>
+    </footer>
 </body>
+</html>

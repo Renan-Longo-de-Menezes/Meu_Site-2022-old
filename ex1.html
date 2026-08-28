@@ -1,50 +1,67 @@
-<html>
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <form name="cadastro" method="post" action="php/cadastro.php">
-    </form>
-	<title>ex1</title>
-    </head>
-<main class="grid">
-	<script type="text/javascript">
-	function horario(){
-		hoje = new Date();
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Exercício 1</title>
+    <link rel="shortcut icon" href="img/icone.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/estilos-exercicios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-		hora = hoje.getHours();
-		if (hora < 10)
-			hora = "0" + hora;
+    <header class="ex-header">
+        <h1>Formulário de Cadastro</h1>
+        <p>Exercício 1</p>
+    </header>
 
-		minutos = hoje.getMinutes();
-		if (minutos < 10)
-			minutos = "0" + minutos;
+    <div class="clock-bar" id="clock">00:00:00</div>
 
-		segundos = hoje.getSeconds();
-		if (segundos < 10)
-			segundos = "0" + segundos;
+    <main class="ex-main">
+        <div class="ex-card">
+            <h2>Cadastro</h2>
+            <p class="subtitle">Preencha os campos abaixo</p>
 
-		document.form1.horaatual.value = hora+":"+minutos+":"+segundos;
+            <form name="cadastro" method="post" action="php/cadastro.php" class="ex-form">
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="ender">Endereço</label>
+                    <input type="text" id="ender" name="ender" placeholder="Rua, número, bairro" required>
+                </div>
+                <div class="form-group">
+                    <label for="telef">Telefone</label>
+                    <input type="tel" id="telef" name="telef" placeholder="(00) 00000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="cidad">Cidade</label>
+                    <input type="text" id="cidad" name="cidad" placeholder="Sua cidade">
+                </div>
 
-	}
-window.setInterval("horario()", 1000);
-</script>
-<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
-    <main class="grid">
-		<!-- primeira sessão -->
-		<section class="grid-item"> <!-- section - usado para fazer uma sessão expecífica para cada parte em que for demarcada com a grid -->
-			<form name="cadastro" method="post" action="php/cadastro.php">
-				<label>Nome:</label> <input type="text" name="nome" class="input1">
-				<p></p>
-				<label>Endereço:</label> <input type="text" name="ender" class="input1">
-				<p></p>
-				<label>Telefone:</label> <input type="text" name="telef" class="input1">
-				<p></p>
-				<label>Cidade:</label> <input type="text" name="cidad" class="input1">
-				<p></p>
-				<input type="submit" value="ENVIAR">
-				<input type="reset" value="APAGAR">
+                <div class="form-actions">
+                    <input type="submit" value="ENVIAR" class="btn btn-primary">
+                    <input type="reset" value="APAGAR" class="btn btn-secondary">
+                </div>
             </form>
-            
-        </section>
+        </div>
     </main>
-</main>
+
+    <footer class="ex-footer">
+        <p>Desenvolvido por <strong>Renan Longo de Menezes</strong> — Nº24 — 2EMCC</p>
+    </footer>
+
+    <script>
+        function horario() {
+            const hoje = new Date();
+            const h = String(hoje.getHours()).padStart(2, '0');
+            const m = String(hoje.getMinutes()).padStart(2, '0');
+            const s = String(hoje.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+        }
+        setInterval(horario, 1000);
+        horario();
+    </script>
+</body>
 </html>
