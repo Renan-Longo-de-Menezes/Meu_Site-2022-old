@@ -128,6 +128,12 @@ O site é totalmente responsivo, com breakpoints em:
 | CSS | 1 arquivo só | Modular e organizado |
 | Acessibilidade | Baixa | `aria-label`, contraste, semântica |
 
+Menu antes: 
+![alt text](image-1.png)
+
+Menu depois:
+![alt text](image.png)
+
 ## 📝 Licença
 
 Este projeto foi desenvolvido como parte das atividades do curso técnico em informática e está disponível para fins educacionais.
